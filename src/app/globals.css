@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Form  */
+.input {
+	@apply block w-full mt-3 text-white rounded-xl p-5;
+}
+.label {
+	@apply font-bold text-white text-base;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Post */
+.post {
+	@apply border-b  hover:bg-opacity-80 duration-150 py-4 flex gap-5;
+}
+.options {
+	@apply absolute top-5 right-0 z-10  border overflow-hidden rounded-xl shadow;
+}
+.option {
+	@apply px-4 py-1 cursor-pointer duration-150;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Modal */
+.modale-background {
+	@apply bg-gray-900 bg-opacity-80 fixed top-0 left-0 bottom-0 right-0 flex justify-center items-center z-30;
+}
+.modale-foreground {
+	@apply rounded-xl shadow lg:w-[740px] w-10/12 overflow-y-auto p-5  border;
+}
+.modale-user-foreground {
+	@apply rounded-xl shadow lg:w-[740px] w-10/12 overflow-y-auto p-5  border;
+}
+
+/* Auth */
+.auth-method {
+	@apply border rounded-3xl  p-5  hover:bg-gray-900 duration-150;
+}
+
+/* User */
+.user-button {
+	@apply border rounded-xl py-3 w-full text-center duration-150 cursor-pointer mt-3;
+}
+
+.title {
+	@apply text-center font-bold text-white text-xl;
 }
